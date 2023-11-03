@@ -14,7 +14,6 @@
     gap: 20px;
 
     @include mobile {
-      margin: 20px;
       align-self: center;
       text-align: center;
       flex-direction: column;
@@ -37,9 +36,7 @@
       }
     }
   }
-
   .titleContainer {
-    padding: 0 20px;
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -73,7 +70,7 @@
       }
 
       h1 {
-        font-size: 80px;
+        font-size: 96px;
         font-weight: 100;
 
         @include mobile {
@@ -99,12 +96,12 @@
     }
   }
   .listContainer {
-    padding: 0 20px;
     flex: 2;
     display: flex;
-    gap: 32px;
+    gap: 20px;
     max-width: 1366px;
     margin: auto;
+    padding: 20px;
 
     @include mobile {
       flex-direction: column;
@@ -112,12 +109,12 @@
     }
 
     .box {
-      padding: 32px;
+      padding: 50px;
       border: 0.5px solid gray;
-      border-radius: 8px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border-radius: 10px;
 
       @include mobile {
         border: none;
@@ -127,23 +124,26 @@
       }
 
       p {
-        margin-top: 18px;
-        line-height: 1.5;
-      }
-
-      p {
         @include mobile {
           display: none;
         }
       }
 
       button {
-        margin-top: 20px;
         padding: 10px;
         background-color: orange;
         border: none;
         cursor: pointer;
-        border-radius: 8px;
+        border: 10px;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
